@@ -5,6 +5,8 @@ const codicesconto = document.getElementById('codice');
 const verificato = document.getElementById('verificato');
 const verificabtn = document.getElementById('verificatore');
 let prezzototale = 0;
+
+
 function calcolaprezzo() {
 if (giorni.value > 6) {
 prezzototale = giorni.value * 27;
@@ -17,8 +19,9 @@ if (prezzototale > 500) {
 } else {
     prezzo.style.color = 'green';
 }
- 
 }
+
+
 function verifica(){
     if (codicesconto.value == 'ESTATE2024') {
 verificato.innerText= 'codice valido!';
@@ -33,5 +36,7 @@ verificato.style.backgroundColor='gray';
 codicesconto.style.border = '2px solid black'; 
 }
 }
+
+
 verificabtn.onclick = verifica;
 preventivobtn.onclick = calcolaprezzo;
