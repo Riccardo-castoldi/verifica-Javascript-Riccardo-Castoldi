@@ -1,7 +1,9 @@
 const giorni = document.getElementById('giorni');
 const prezzo = document.getElementById('prezzo');
-const preventivoBtn = document.getElementById('preventivo');
-const codiceSconto = document.getElementById('codice');
+const preventivobtn = document.getElementById('preventivo');
+const codicesconto = document.getElementById('codice');
+const verificato = document.getElementById('verificato');
+const verificabtn = document.getElementById('verificatore');
 let prezzototale = 0;
 function calcolaprezzo() {
 if (giorni.value > 6) {
@@ -15,5 +17,13 @@ if (prezzototale > 500) {
 } else {
     prezzo.style.color = 'green';
 }
+ 
 }
-preventivoBtn.onclick = calcolaprezzo;
+function verifica(){
+    if (codicesconto.value == 'ESTATE2024') {
+verificato.innerText= 'codice valido!';
+verificato.style.backgroundColor='green';
+}  
+}
+verificabtn.onclick = verifica;
+preventivobtn.onclick = calcolaprezzo;
