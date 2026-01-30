@@ -23,7 +23,10 @@ function verifica(){
     if (codicesconto.value == 'ESTATE2024') {
 verificato.innerText= 'codice valido!';
 verificato.style.backgroundColor='green';
-}  
+codicesconto.style.border = '2px solid black';
+}  else if (codicesconto.value == '') {
+    codicesconto.style.border = '5px solid red';  
+} 
 }
 verificabtn.onclick = verifica;
 preventivobtn.onclick = calcolaprezzo;
