@@ -5,6 +5,10 @@ let prezzototale = 0;
 function calcolaprezzo() {
 if (giorni.value > 6) {
 prezzototale = giorni.value * 27;
+} else if (giorni.value< 7){
+prezzototale= giorni.value*30
 }
+prezzo.innerText = `Il prezzo totale è di euro `+ prezzototale;
+
 }
 preventivoBtn.onclick = calcolaprezzo;
