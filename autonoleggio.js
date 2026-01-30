@@ -25,8 +25,13 @@ verificato.innerText= 'codice valido!';
 verificato.style.backgroundColor='green';
 codicesconto.style.border = '2px solid black';
 }  else if (codicesconto.value == '') {
+verificato.innerText= '';
     codicesconto.style.border = '5px solid red';  
-} 
+}  else  {
+ verificato.innerText= 'codice scaduto!';
+verificato.style.backgroundColor='gray';
+codicesconto.style.border = '2px solid black'; 
+}
 }
 verificabtn.onclick = verifica;
 preventivobtn.onclick = calcolaprezzo;
